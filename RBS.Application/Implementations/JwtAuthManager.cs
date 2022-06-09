@@ -61,6 +61,9 @@ namespace RBS.Application.Implementations
             var userName = principal.Identity?.Name;
             var existingRefreshTokenDomain = await _userTokenRepository.GetByRefreshToken(refreshToken);
 
+            if (existingRefreshTokenDomain == null)
+                throw new Exception("refresh token doesnot exist");
+
             var existingRefreshToken = new RefreshToken()
             {
                 UserName = existingRefreshTokenDomain.UserName,
@@ -101,7 +104,7 @@ namespace RBS.Application.Implementations
                     },
                     out var validatedToken);
 
-            return (principal, validatedToken as JwtSecurityToken);
+            return (principal, (JwtSecurityToken)validatedToken);
         }
 
 

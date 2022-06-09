@@ -9,13 +9,13 @@ namespace RBS.Domain
         public int Id { get; set; }
         [Required]
         [MaxLength(5)]
-        public string Run { get; set; }
+        public string Run { get; set; } = default!;
         [Required]
         [MaxLength(20)]
-        public string RId { get; set; }
+        public string RId { get; set; } = default!;
         [Required]
         [MaxLength(30)]
-        public string Name { get; set; }
+        public string Name { get; set; } = default!;
         public decimal Stars { get; set; }
         [DataType(DataType.Date)]
         public DateTime OpenTime { get; set; }
@@ -23,14 +23,14 @@ namespace RBS.Domain
         public DateTime CloseTime { get; set; }
         public decimal TBookPrice { get; set; }
         [MaxLength(5)]
-        public string Currency { get; set; }
+        public string Currency { get; set; } = default!;
 
 
-        public ICollection<Menu> Menus { get; set; }
-        public Address Address { get; set; }
-        public ICollection<RestaurantType> RestaurantTypes { get; set; }
-        public ICollection<Img> Imgs { get; set; }
-        public ICollection<Table> Tables { get; set; }
+        public ICollection<Menu>? Menus { get; set; }
+        public Address? Address { get; set; }
+        public ICollection<RestaurantType>? RestaurantTypes { get; set; }
+        public ICollection<Img>? Imgs { get; set; }
+        public ICollection<Table>? Tables { get; set; }
 
     }
 }
