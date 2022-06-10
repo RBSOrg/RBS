@@ -1,8 +1,7 @@
 ﻿using RBS.Application.Abstractions;
 using RBS.Application.Exceptions;
-using RBS.Application.Models;
 using RBS.Data.Abstractions;
-using RBS.Domain;
+using RBS.Domain.Entities;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -35,7 +34,7 @@ namespace RBS.Application.Implementations
             return user.UserRoles.Select(role => role.Role.RoleName).ToList();
         }
 
-        public async Task<int> RegisterAccount(UserModel user)
+        public async Task<int> RegisterAccount(Models.UserModel user)
         {
             if (await _userRepository.Exists(user.UserName))
                 throw new UserAlreadyExistException(400, $"{user.UserName} already exist");

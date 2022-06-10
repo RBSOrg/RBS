@@ -1,4 +1,4 @@
-﻿namespace RBS.Domain
+﻿namespace RBS.Domain.Entities
 {
     public class RestaurantType
     {
@@ -6,6 +6,6 @@
         public int TypeId { get; set; }
 
         public Restaurant Restaurant { get; set; }
-        public Domain.Type Type { get; set; }
+        public Type Type { get; set; }
     }
 }

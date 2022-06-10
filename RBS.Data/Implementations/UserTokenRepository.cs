@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RBS.Data.Abstractions;
-using RBS.Domain;
+using RBS.Domain.Entities;
 using RBS.PersistenceDB.Context;
 
 namespace RBS.Data.Implementations

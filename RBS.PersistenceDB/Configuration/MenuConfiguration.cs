@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using RBS.Domain.Entities;
 
 namespace RBS.PersistenceDB.Configuration
 {
-    public class MenuConfiguration : IEntityTypeConfiguration<Domain.Menu>
+    public class MenuConfiguration : IEntityTypeConfiguration<Menu>
     {
-        public void Configure(EntityTypeBuilder<Domain.Menu> builder)
+        public void Configure(EntityTypeBuilder<Menu> builder)
         {
             builder.HasOne(m => m.Restaurant)
                 .WithMany(r => r.Menus);

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace RBS.Domain
+namespace RBS.Domain.Entities
 {
     public class Menu
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RBS.Domain;
+using RBS.Domain.Entities;
 
 namespace RBS.PersistenceDB.Configuration
 {

@@ -1,4 +1,4 @@
-﻿using RBS.Domain;
+﻿using RBS.Domain.Entities;
 
 namespace RBS.Data.Abstractions
 {

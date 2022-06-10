@@ -12,6 +12,7 @@ namespace RBS.Application
             //Services
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IJwtAuthManager, JwtAuthManager>();
+            services.AddScoped<IBookingService, BookingService>();
         }
     }
 }

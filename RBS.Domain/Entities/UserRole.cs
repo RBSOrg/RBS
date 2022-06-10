@@ -1,4 +1,4 @@
-﻿namespace RBS.Domain
+﻿namespace RBS.Domain.Entities
 {
     public class UserRole
     {
